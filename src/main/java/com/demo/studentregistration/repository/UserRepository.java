@@ -1,15 +1,19 @@
 package com.demo.studentregistration.repository;
 
-import java.util.Optional;
+import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-import com.demo.studentregistration.entity.User;
+import com.demo.studentregistration.model.User;
 
-@Repository
+
 public interface UserRepository extends JpaRepository<User, Integer> {
 
-	Optional<User> findByName(String name);
+  boolean existsByUsername(String username);
+
+  User findByUsername(String username);
+
+  @Transactional
+  void deleteByUsername(String username);
 
 }
