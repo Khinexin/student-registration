@@ -21,11 +21,18 @@ spring:
 server:
    port: 8080 # This is the default port anyway, but you can change it here
 
+logging:
+  io:
+    swagger:
+      models:
+        parameters:
+          AbstractSerializableParameter: error
+          
 security:
   jwt:
     token:
       secret-key: secret-key
-      expire-length: 3600000 # 1h
+      expire-length: 300000 # 5min (5*60*1000ms)
       
 UserController:
   signin: Authenticates user and returns its JWT token.
@@ -33,3 +40,10 @@ UserController:
   delete: Deletes specific user by username
   search: Returns specific user by username
   me: Returns current user's data
+  
+StudentController:
+  create: Create New Student
+  update: Update specific student by id
+  delete: Delete specific student by id
+  findById: Find specific student by id
+  findAll: Find all students
