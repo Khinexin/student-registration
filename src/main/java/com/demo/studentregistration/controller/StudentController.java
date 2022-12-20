@@ -52,9 +52,9 @@ public class StudentController {
 	@ApiResponses(value = { @ApiResponse(code = 400, message = "Something went wrong"),
 			@ApiResponse(code = 403, message = "Access denied") })
 	public String update(@ApiParam("Edit Student") @RequestBody StudentDataDTO student,
-			@ApiParam("Edit Student By Id") @PathVariable Integer id) {
+			@ApiParam("Edit Student By Id") @PathVariable String id) {
 		Student tempStudent = modelMapper.map(student, Student.class);
-		tempStudent.setId(id);
+		tempStudent.setId(Integer.valueOf(id));
 		studentService.update(tempStudent);
 		return "Successfully updated student | id = " + id;
 	}
@@ -65,8 +65,8 @@ public class StudentController {
 			@ApiResponse(code = 403, message = "Access denied"),
 			@ApiResponse(code = 404, message = "Student doesn't exist"),
 			@ApiResponse(code = 500, message = "Expired or invalid JWT token") })
-	public String delete(@ApiParam("id") @PathVariable Integer id) {
-		studentService.delete(id);
+	public String delete(@ApiParam("Delete student by id") @PathVariable String id) {
+		studentService.delete(Integer.valueOf(id));
 		return "Successfully deleted student | id = " + id;
 	}
 
@@ -76,8 +76,8 @@ public class StudentController {
 	@ApiResponses(value = { @ApiResponse(code = 400, message = "Something went wrong"),
 			@ApiResponse(code = 403, message = "Access denied"),
 			@ApiResponse(code = 500, message = "Expired or invalid JWT token") })
-	public StudentResponseDTO findById(@ApiParam("id") @PathVariable Integer id) {
-		return modelMapper.map(studentService.findById(id), StudentResponseDTO.class);
+	public StudentResponseDTO findById(@ApiParam("Get student by id") @PathVariable String id) {
+		return modelMapper.map(studentService.findById(Integer.valueOf(id)), StudentResponseDTO.class);
 	}
 
 	@GetMapping
