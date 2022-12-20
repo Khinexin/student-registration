@@ -20,13 +20,13 @@ public class Scheduler {
 
 	private final StudentService studentService;
 
-	@Scheduled(cron = "0 * * * * *")
+	@Scheduled(cron = "0 0 */1 * * *") // every one hour
 	public void scheduleTaskUsingCronExpression() {
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String strDate = sdf.format(new Date());
 		System.out.println("Scheduler start " + strDate);
-		log.info(strDate + "| count student " + studentService.countStudent());
+		log.info("schedule - count students " + studentService.countStudent());
 
 	}
 }
