@@ -1,4 +1,4 @@
-# Test Project for Back-end Engineer
+# Test Project for Java Developer 
 
 
 ## Requirements
@@ -7,8 +7,9 @@ For building and running the application you need:
 
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Maven 3](https://maven.apache.org)
+- Database: MySql / Postgresql
 
-## Running the application locally
+# Running the application locally
 
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.demo.studentregistration.StudentRegistrationApplication` class from your IDE.
 
@@ -28,6 +29,7 @@ $ mvn spring-boot:run
 - Schedular Job using cron expression
 - Postgresql, MySql
 - lombok 
+features such as 
 - mail service and export excel service
 
 ## Configure MySQL
