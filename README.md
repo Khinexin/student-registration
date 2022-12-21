@@ -39,7 +39,7 @@ features such as
 
 To generate jwt-token , login  `http://localhost:8080/users/signin?username=admin&password=admin `
 
-- initiated data (username, password)
+- initiated user data (username, password)
 - admin, admin
 - client, client
 
