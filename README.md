@@ -26,10 +26,10 @@ $ mvn spring-boot:run
 - Spring Data JPA with Hibernate
 - Spring Security with JWT Token
 - Swagger UI
-- Schedular Job using cron expression
 - Postgresql, MySql
-- lombok 
-features such as 
+- lombok and
+(features such as)
+- Schedular Job using cron expression
 - mail service and export excel service
 
 ## Configure MySQL
