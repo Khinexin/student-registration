@@ -24,20 +24,20 @@ $ mvn spring-boot:run
 - Spring Web
 - Spring Data JPA with Hibernate
 - Spring Security with JWT Token
-- Swagger 
+- Swagger UI
 - Schedular Job using cron expression
 - Postgresql, MySql
-- lombok
+- lombok 
 - mail service and export excel service
 
 ## Configure MySQL
-- Update the application.properties file in the `src/main/resources` folder with the URL, 'username' and 'password' for your MySQL/Postgresql instance. The table schema for the Sales objects will be created for you in the database.
+- Update the application.properties file in the `src/main/resources` folder with the URL, 'username' and 'password' for your MySQL/Postgresql instance. The table schema for the User and Student objects will be created for you in the database.
 
 ## Description
 
 To generate jwt-token , login  `http://localhost:8080/users/signin?username=admin&password=admin `
 
-- (username, password)
+- initiated data (username, password)
 - admin, admin
 - client, client
 
