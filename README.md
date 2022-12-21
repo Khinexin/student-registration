@@ -35,7 +35,7 @@ $ mvn spring-boot:run
 
 ## Description
 
-To Test the generated jwt-token , login  `http://localhost:8080/users/signin?username=admin&password=admin `
+To generate jwt-token , login  `http://localhost:8080/users/signin?username=admin&password=admin `
 
 - (username, password)
 - admin, admin
