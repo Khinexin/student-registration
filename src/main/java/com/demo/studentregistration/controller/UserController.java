@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.studentregistration.annotation.Logger;
 import com.demo.studentregistration.dto.UserDataDTO;
 import com.demo.studentregistration.dto.UserResponseDTO;
 import com.demo.studentregistration.model.User;
@@ -35,6 +36,7 @@ public class UserController {
 	private final UserService userService;
 	private final ModelMapper modelMapper;
 
+	@Logger("Sign In User.")
 	@PostMapping("/signin")
 	@ApiOperation(value = "${UserController.signin}")
 	@ApiResponses(value = { @ApiResponse(code = 400, message = "Something went wrong"),
@@ -44,6 +46,7 @@ public class UserController {
 		return userService.signin(username, password);
 	}
 
+	@Logger("Sign Up User.")
 	@PostMapping("/signup")
 	@ApiOperation(value = "${UserController.signup}")
 	@ApiResponses(value = { @ApiResponse(code = 400, message = "Something went wrong"),
@@ -53,6 +56,7 @@ public class UserController {
 		return userService.signup(modelMapper.map(user, User.class));
 	}
 
+	@Logger("Delete User.")
 	@DeleteMapping(value = "/{username}")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ApiOperation(value = "${UserController.delete}", authorizations = { @Authorization(value = "apiKey") })
@@ -65,6 +69,7 @@ public class UserController {
 		return username;
 	}
 
+	@Logger("Search User.")
 	@GetMapping(value = "/{username}")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@ApiOperation(value = "${UserController.search}", response = UserResponseDTO.class, authorizations = {
@@ -77,6 +82,7 @@ public class UserController {
 		return modelMapper.map(userService.search(username), UserResponseDTO.class);
 	}
 
+	@Logger("Current User.")
 	@GetMapping(value = "/me")
 	@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CLIENT')")
 	@ApiOperation(value = "${UserController.me}", response = UserResponseDTO.class, authorizations = {
@@ -88,6 +94,7 @@ public class UserController {
 		return modelMapper.map(userService.whoami(req), UserResponseDTO.class);
 	}
 
+	@Logger("Refresh Token.")
 	@GetMapping("/refresh")
 	@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CLIENT')")
 	public String refresh(HttpServletRequest req) {

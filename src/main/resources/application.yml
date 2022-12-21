@@ -47,3 +47,4 @@ StudentController:
   delete: Delete specific student by id
   findById: Find specific student by id
   findAll: Find all students
+  findPaginated: Find all paginated students
