@@ -1,30 +1,20 @@
-server:
-   port: 8080 
-
+# active db settng ; mail setting
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/mystudentdb?createDatabaseIfNotExist=true
-    username: root
-    password: admin
+
+  profiles:
+    active: posgresql
+
   tomcat:
     max-wait: 20000
     max-active: 50
     max-idle: 20
     min-idle: 15
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-        format_sql: true
-        id:
-          new_generator_mappings: false
+
   mail:
     default-encoding: UTF-8
     host: smtp.gmail.com
     username: mytestmail.aabbcc@gmail.com
-    password: hdnemiojgfaxkcvn #P@ssword1234567890
+    password: hdnemiojgfaxkcvn
     port: 587
     properties:
       mail:
@@ -38,25 +28,28 @@ spring:
     protocol: smtp
     test-connection: false
 
-
-
+    
+# common 
+server:
+   port: 8080 
+   
 logging:
   io:
     swagger:
       models:
         parameters:
           AbstractSerializableParameter: error
-          
+
 security:
   jwt:
     token:
       secret-key: secret-key
       expire-length: 300000 # 5min (5*60*1000ms)
-      
-      
+
 HomeController:
   test: Test
   sendEmail: Sent Mail
+
 UserController:
   signin: Authenticates user and returns its JWT token.
   signup: Creates user and returns its JWT token
@@ -71,4 +64,3 @@ StudentController:
   findById: Find specific student by id
   findAll: Find all students
   findPaginated: Find all paginated students
-  
