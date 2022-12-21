@@ -1,9 +1,5 @@
 package com.demo.studentregistration.dto;
 
-import java.util.List;
-
-import com.demo.studentregistration.model.UserRole;
-
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;

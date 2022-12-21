@@ -1,24 +1,29 @@
 package com.demo.studentregistration.dto;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class StudentDataDTO {
-	
+@AllArgsConstructor
+@Builder
+public class EmailDTO {
+
 	@ApiModelProperty(position = 0)
-	private String name;
+	private String to;
 	@ApiModelProperty(position = 1)
-	private String fathername;
+	private String from;
 	@ApiModelProperty(position = 2)
-	private String dob;
+	private String subject;
 	@ApiModelProperty(position = 3)
-	private String contactNo;
+	private String content;
+
+//	private String attachment;
+
 	@ApiModelProperty(position = 4)
-	private String email;
-	@ApiModelProperty(position = 5)
-	private String address;
-	
+	private String attachName;
+
 }
