@@ -31,7 +31,7 @@ $ mvn spring-boot:run
 - Schedular Job using cron expression
 - mail service and export excel service
 
-## Configure MySQL
+## Configure Postgresql / MySQL
 - Update the application.properties file in the `src/main/resources` folder with the URL, 'username' and 'password' for your MySQL/Postgresql instance. The table schema for the User and Student objects will be created for you in the database.
 
 ## Description
