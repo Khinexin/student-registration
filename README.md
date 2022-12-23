@@ -38,8 +38,9 @@ $ mvn spring-boot:run
 
 To generate jwt-token , 
 - [swagger api](http://localhost:8080/swagger-ui.html)
-login url`(http://localhost:8080/users/signin?username=admin&password=admin)` : initiated user data (username, password) 
+- login url`(http://localhost:8080/users/signin?username=admin&password=admin)` : initiated user data (username, password) 
+```shell
 - admin, admin
 - client, client
-
+```
 
