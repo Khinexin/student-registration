@@ -1,6 +1,5 @@
 # Test Project for Java Developer 
 
-
 ## Requirements
 
 For building and running the application you need:
@@ -28,7 +27,7 @@ $ mvn spring-boot:run
 - Swagger UI
 - Postgresql, MySql
 - lombok and
-(features such as)
+- (features such as)
 - Schedular Job using cron expression
 - mail service and export excel service
 
