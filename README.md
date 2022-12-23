@@ -6,7 +6,7 @@ For building and running the application you need:
 
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Maven 3](https://maven.apache.org)
-- Database: MySql / Postgresql
+- Database: [MySql](https://dev.mysql.com/downloads/mysql) / [Postgresql](https://www.postgresql.org/)
 
 # Running the application locally
 
@@ -27,7 +27,7 @@ $ mvn spring-boot:run
 - Swagger UI
 - Postgresql, MySql
 - lombok and
-- (features such as)
+(features such as)
 - Schedular Job using cron expression
 - mail service and export excel service
 
@@ -38,10 +38,9 @@ $ mvn spring-boot:run
 
 To generate jwt-token , 
 ```shell
-( swagger api )
-`http://localhost:8080/swagger-ui.html`
+[swagger api](http://localhost:8080/swagger-ui.html)
 ```
-login  initiated user data (username, password)  `http://localhost:8080/users/signin?username=admin&password=admin `
+login  initiated user data (username, password)  `http://localhost:8080/users/signin?username=admin&password=admin`
 - admin, admin
 - client, client
 
