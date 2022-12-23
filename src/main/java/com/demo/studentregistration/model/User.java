@@ -16,7 +16,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
-@Entity
+@Entity (name = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
