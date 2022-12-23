@@ -36,6 +36,7 @@ $ mvn spring-boot:run
 
 ## Configure Mail service (Google)
 - Update the application.properties file in the `src/main/resources` folder with the URL, username `spring.mail.username` and [password](https://myaccount.google.com/apppasswords) `spring.mail.password` for your gmail-service instance.
+- [reference config for google app password](https://support.salesmate.io/hc/en-us/articles/360004467631-Sign-in-using-App-Passwords-Gmail-SMTP)
 
 ## Description
 
