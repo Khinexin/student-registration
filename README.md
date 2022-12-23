@@ -27,7 +27,7 @@ $ mvn spring-boot:run
 - Swagger UI
 - Postgresql, MySql
 - lombok and
-(features such as)
+`(features such as)`
 - Schedular Job using cron expression
 - mail service and export excel service
 
@@ -37,10 +37,8 @@ $ mvn spring-boot:run
 ## Description
 
 To generate jwt-token , 
-```shell
-[swagger api](http://localhost:8080/swagger-ui.html)
-```
-login  initiated user data (username, password)  `http://localhost:8080/users/signin?username=admin&password=admin`
+- [swagger api](http://localhost:8080/swagger-ui.html)
+login url`(http://localhost:8080/users/signin?username=admin&password=admin)` : initiated user data (username, password) 
 - admin, admin
 - client, client
 
