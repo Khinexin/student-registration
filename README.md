@@ -32,7 +32,10 @@ $ mvn spring-boot:run
 - mail service and export excel service
 
 ## Configure Postgresql / MySQL
-- Update the application.properties file in the `src/main/resources` folder with the URL, 'username' and 'password' for your MySQL/Postgresql instance. The table schema for the User and Student objects will be created for you in the database.
+- Update the application.properties file in the `src/main/resources` folder with the URL, 'spring.datasource.username' and 'spring.datasource.password' for your MySQL/Postgresql instance. The table schema for the User and Student objects will be created for you in the database.
+
+## Configure Mail service (Google)
+- Update the application.properties file in the `src/main/resources` folder with the URL, 'spring.mail.username' and 'spring.mail.password' [password](https://myaccount.google.com/apppasswords) for your gmail-service instance.
 
 ## Description
 
